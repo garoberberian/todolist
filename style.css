@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    background-color: lightgray;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5e2c2c;
+}
+
+.todolist-container {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+}
+
+.todolist-container div {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 7px;
+}
+
+input:focus {
+    outline: none;    
+}
+
+.btn {
+    background-color: rgb(71, 71, 71);
+    padding: 4px 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #aa5e5e;
+}
+
+.list-item {
+    position: relative;
+    background-color: #979797;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    padding: 10px 0 10px 20px;
+}
+
+.list-item:hover {
+    background-color: rgb(56, 52, 52) !important;
+    color: white;
+}
+
+#unordered-list {
+    padding: 0;
+    list-style: none;
+}
+
+#unordered-list > .list-item:nth-child(even) {
+    background-color: #ccc;;
+}
+
+.selected::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 8px;
+    width: 4px;
+    height: 10px;
+    border-right: 3px solid green;
+    border-bottom: 4px solid green;
+    transform: rotate(45deg);
+}
+
+.selected {
+    text-decoration: line-through;
+}
+
+.btn-remove {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    z-index: 2;
+    padding:0 10px;
+}
+
+.btn-remove:hover {
+    color: red;
+}
+
+.btn-deleteall {
+    visibility: hidden;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+}
